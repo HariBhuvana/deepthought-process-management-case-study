@@ -1,0 +1,368 @@
+# DeepThought AI Business Analyst Assignment
+
+# PART A – DIAGNOSIS
+
+## Situation A – The Alert Nobody Responds To
+
+### 1. Stated Problem
+
+The daily automated alert email is functioning correctly, but department heads are not responding to red items. The CEO feels he lacks visibility despite receiving reports every morning. Anil and Karthik believe the problem is that people do not act on the information provided.
+
+### 2. What Is Actually Going On?
+
+The problem is not lack of visibility. The problem is lack of accountability ownership and action pathways.
+
+The alert email reports information but does not create responsibility.
+
+A red item exists at a department level rather than at an individual level. Since ownership is assigned to “Purchase,” “Warehouse,” or “Quality” instead of a named person, no one feels direct pressure to prepare, explain, escalate, or resolve the issue.
+
+Additionally, the alert is backward-looking rather than action-oriented. It tells management what is already delayed but does not show:
+
+* Who owns the delay
+* What has been attempted
+* Whether escalation happened
+* Whether the issue is recurring
+* What dependency is blocking progress
+
+As a result, the email becomes informational noise rather than an execution system.
+
+The CEO's statement that he wants the system to tell him where the problem is before he asks indicates that he is not looking for reports. He is looking for diagnostic visibility.
+
+### 3. Evidence Supporting This Diagnosis
+
+* The tracker shows department names rather than individual accountability.
+* The advisor explicitly noted that if a task is assigned to “Warehouse,” nobody feels pressure.
+* The alert email lacks escalation history.
+* The alert email lacks trend information.
+* The same red items remain red for days.
+* The CEO receives visibility of status but not visibility of causes.
+
+Therefore, the issue is not reporting failure. It is accountability architecture failure.
+
+---
+
+## Situation B – The Blank Field
+
+### 1. Stated Problem
+
+Anil and Karthik believe supervisors are not disciplined enough to fill root-cause fields.
+
+### 2. What Is Actually Going On?
+
+The organization has a psychological safety problem.
+
+Supervisors have learned that honest reporting increases personal risk.
+
+When root causes are documented accurately, review meetings become blame sessions. Therefore employees protect themselves by leaving fields blank or entering vague statements.
+
+This behavior is rational, not careless.
+
+The organization unintentionally rewards ambiguity and punishes transparency.
+
+As a result, the deviation system collects compliance data instead of learning data.
+
+### 3. Evidence Supporting This Diagnosis
+
+Supervisor 1 stated that writing the actual issue leads to extensive questioning in review meetings.
+
+Supervisor 2 stated that after an honest root cause implicated a maintenance failure, the maintenance head was publicly criticized.
+
+The advisor found that 70% of root-cause fields are blank or generic.
+
+Examples include:
+
+* “Will be investigated”
+* “Under review”
+* “Process deviation”
+
+These entries avoid accountability while satisfying documentation requirements.
+
+Anil and Karthik missed this because they observed behavior but did not investigate motivation.
+
+They interpreted missing data as discipline failure instead of self-protection behavior.
+
+---
+
+## Situation C – The Meeting That Eats the Day
+
+### 1. Stated Problem
+
+The daily status meeting consistently exceeds its scheduled duration because technical issues arise that require discussion.
+
+### 2. What Is Actually Going On?
+
+This is fundamentally a planning system failure disguised as a meeting problem.
+
+The organization lacks structured daily planning.
+
+There is:
+
+* Monthly planning
+* Weekly planning
+
+But no daily execution planning.
+
+Without daily plans, nobody can distinguish between:
+
+* Planned work
+* Routine work
+* Unplanned work
+
+As a result, the daily meeting becomes the place where planning, prioritization, firefighting, escalation, and technical diagnosis all occur simultaneously.
+
+The meeting has become a substitute for an execution system.
+
+### 3. Evidence Supporting This Diagnosis
+
+The advisor discovered there was no daily micro-plan.
+
+Twelve department heads receive approximately five to ten minutes each, creating an expected duration of sixty to one hundred twenty minutes despite the meeting being scheduled for thirty minutes.
+
+Technical troubleshooting is occurring inside the status meeting instead of dedicated problem-solving forums.
+
+No categorization exists for unplanned work.
+
+No root-cause tracking exists for recurring disruptions.
+
+Therefore, the meeting is overloaded because the planning system underneath it is incomplete.
+
+---
+
+# PART B – INTERVENTION DESIGN
+
+## Situation A – The Alert Nobody Responds To
+
+### First Conversation
+
+I would meet individually with three department heads whose items repeatedly remain red.
+
+My question would be:
+
+“When you receive a red alert, what prevents action between reading the email and closing the issue?”
+
+The goal is not to discuss the report. The goal is to understand execution friction.
+
+### First Two Weeks
+
+1. Introduce named ownership.
+2. Require every red item to have:
+
+   * Owner
+   * Blocker
+   * Next action
+   * Escalation date
+3. Review unresolved items daily.
+
+### Tool Design
+
+Dashboard View:
+
+* Task
+* Owner Name
+* Due Date
+* Days Delayed
+* Blocker
+* Escalation Status
+* Previous Escalation History
+
+Technology:
+
+* Excel
+* Power Automate
+* Outlook Email
+
+Reason:
+
+The organization already uses Excel successfully.
+
+### Supervisor Buy-In
+
+I would tell the supervisor:
+
+“I am not adding work. I am removing surprise questioning. If your blocker is visible before the review meeting, nobody asks why you hid it later.”
+
+---
+
+## Situation B – The Blank Field
+
+### First Conversation
+
+Private discussions with supervisors.
+
+Question:
+
+“If you could write the truth with no fear of consequences, what would normally go into this field?”
+
+### First Two Weeks
+
+1. Separate root-cause discussion from blame discussion.
+2. Introduce learning reviews instead of accountability reviews.
+3. Publicly reward accurate reporting.
+
+### Tool Design
+
+Deviation Form:
+
+* What happened?
+* Immediate impact?
+* Suspected cause?
+* Confidence level?
+* Support required?
+
+Technology:
+
+* Excel Form
+* Power Automate Workflow
+* Claude-assisted root-cause summarization
+
+### Supervisor Buy-In
+
+I would explain:
+
+“The purpose of this field is not to identify who failed. It is to identify what failed. If a spare part was unavailable, the system failed. We fix systems, not people.”
+
+---
+
+## Situation C – The Meeting That Eats the Day
+
+### First Conversation
+
+Discussion with COO and General Manager.
+
+Question:
+
+“What percentage of today's meeting content could have been predicted yesterday?”
+
+### First Two Weeks
+
+1. Split meetings into:
+
+   * Daily execution review
+   * Technical problem-solving review
+2. Create daily micro-planning.
+3. Categorize work:
+
+   * Routine
+   * Planned
+   * Unplanned
+
+### Tool Design
+
+Daily Planning Board:
+
+Each HOD enters:
+
+* Today's Top 3 Deliverables
+* Planned Time
+* Unplanned Issues
+* Blockers
+
+Technology:
+
+* Excel
+* Shared Tracker
+* Power Automate Alerts
+
+### Supervisor Buy-In
+
+I would demonstrate that better planning reduces interruptions.
+
+The objective is not more reporting.
+
+The objective is fewer surprise requests during the day.
+
+---
+
+# PART C – SCALE THINKING
+
+## What Breaks First?
+
+The accountability system breaks first.
+
+Today execution depends heavily on Anil and Karthik remembering, following up, and chasing people.
+
+At eight projects, human follow-up cannot scale.
+
+The organization becomes dependent on individuals rather than systems.
+
+---
+
+## What System Would I Build Today?
+
+A Daily Execution Management System.
+
+Every activity must contain:
+
+* Owner
+* Due Date
+* Dependency
+* Escalation Rule
+* Closure Evidence
+
+This creates scalable execution visibility.
+
+---
+
+## What Do I Automate vs Keep Human?
+
+### Automate
+
+* Alerts
+* Reminders
+* Escalations
+* Trend analysis
+* Dashboard generation
+* Report summaries
+
+### Keep Human
+
+* Root-cause discussions
+* Conflict resolution
+* Coaching supervisors
+* Prioritization decisions
+* Cross-functional negotiations
+
+Reason:
+
+Technology can surface signals.
+
+Humans must interpret context and drive behavioral change.
+
+Automation should reduce administrative burden, not replace judgment.
+
+---
+
+# PART D – HAND-DRAWN DIAGRAM
+
+Title:
+
+“Why Visibility Fails”
+
+Center Node:
+
+FEAR + NO ACCOUNTABILITY + NO DAILY PLANNING
+
+Branch 1:
+Fear → Blank Root Causes → Poor Data → No Visibility
+
+Branch 2:
+No Accountability → Red Alerts → No Action → Repeated Delays
+
+Branch 3:
+No Daily Planning → Long Meetings → Firefighting → More Delays
+
+All three branches reconnect into:
+
+CEO Cannot Predict Problems
+
+Then draw:
+
+Psychology Layer
+↓
+Process Layer
+↓
+Technology Layer
+↓
+Business Outcomes
+
+Arrows showing how behavior affects process, process affects data quality, and data quality affects business visibility.
